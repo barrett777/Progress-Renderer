@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using Harmony;
+using HarmonyLib;
 using Verse;
 
 namespace ProgressRenderer
@@ -11,7 +11,7 @@ namespace ProgressRenderer
 
         static Harmony()
         {
-            HarmonyInstance harmony = HarmonyInstance.Create("rimworld.lanilor.progressrenderer");
+            var harmony = new HarmonyLib.Harmony("rimworld.lanilor.progressrenderer");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
 
             //harmony.Patch(AccessTools.Method(AccessTools.TypeByName("RiverMaker"), "ValidatePassage"), null, new HarmonyMethod(typeof(Harmony_RiverMaker_ValidatePassage), "Postfix"));

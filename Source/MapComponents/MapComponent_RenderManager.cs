@@ -5,7 +5,7 @@ using System.IO;
 using System.Threading;
 using FluxJpeg.Core;
 using FluxJpeg.Core.Encoder;
-using Harmony;
+using HarmonyLib;
 using RimWorld;
 using RimWorld.Planet;
 using UnityEngine;
